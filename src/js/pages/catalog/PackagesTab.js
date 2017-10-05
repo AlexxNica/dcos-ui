@@ -34,7 +34,7 @@ const PackagesBreadcrumbs = () => {
     </Breadcrumb>
   ];
 
-  return <Page.Header.Breadcrumbs iconID="packages" breadcrumbs={crumbs} />;
+  return <Page.Header.Breadcrumbs iconID="catalog" breadcrumbs={crumbs} />;
 };
 
 const METHODS_TO_BIND = ["handleSearchStringChange"];

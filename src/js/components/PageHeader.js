@@ -100,13 +100,15 @@ PageHeader.propTypes = {
   ]),
   actions: React.PropTypes.array,
   breadcrumbs: React.PropTypes.node.isRequired,
-  className: classProps,
-  innerClassName: classProps,
-  primaryContentClassName: classProps,
-  secondaryContentClassName: classProps,
+  pageHeaderClassName: classProps,
+  pageHeaderInnerClassName: classProps,
+  pageHeaderSectionPrimaryClassName: classProps,
+  pageHeaderSectionSecondaryClassName: classProps,
   secondaryContentDetail: React.PropTypes.node,
   supplementalContent: React.PropTypes.node,
-  tabs: React.PropTypes.array
+  tabs: React.PropTypes.array,
+  pageHeaderContentClassName: classProps,
+  pageHeaderActionsPrimaryClassNam: classProps
 };
 
 PageHeader.Breadcrumbs = PageHeaderBreadcrumbs;

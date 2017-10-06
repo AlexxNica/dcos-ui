@@ -424,6 +424,13 @@ class PackageDetailTab extends mixin(StoreMixin) {
     const description = cosmosPackage.getDescription();
     const preInstallNotes = cosmosPackage.getPreInstallNotes();
 
+    let preInstallNotesParsed = null;
+    if (preInstallNotes) {
+      preInstallNotesParsed = StringUtil.parseMarkdown(preInstallNotes);
+      preInstallNotesParsed.__html =
+        "<strong>Preinstall Notes: </strong>" + preInstallNotesParsed.__html;
+    }
+
     const definition = [
       {
         label: "Description",
@@ -435,9 +442,10 @@ class PackageDetailTab extends mixin(StoreMixin) {
       {
         label: " ",
         value: preInstallNotes &&
-          <div className="message message-warning">
-            <strong>Preinstall Notes: </strong>{preInstallNotes}
-          </div>
+          <div
+            className="flush-bottom message message-warning"
+            dangerouslySetInnerHTML={preInstallNotesParsed}
+          />
       },
       {
         label: "Information",

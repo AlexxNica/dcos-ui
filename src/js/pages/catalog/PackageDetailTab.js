@@ -443,7 +443,7 @@ class PackageDetailTab extends mixin(StoreMixin) {
         label: " ",
         value: preInstallNotes &&
           <div
-            className="flush-bottom message message-warning"
+            className="pre-install-notes flush-bottom message message-warning"
             dangerouslySetInnerHTML={preInstallNotesParsed}
           />
       },

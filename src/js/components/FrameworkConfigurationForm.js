@@ -234,7 +234,6 @@ export default class FrameworkConfigurationForm extends Component {
       deployErrors
     } = this.props;
 
-    // nicely format titles rendered by the json-schema library
     const TitleField = props => {
       return (
         <h2 className="flush-top short-bottom">
